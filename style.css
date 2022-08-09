@@ -1,0 +1,132 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+@keyframes fade{
+  from{
+    opacity:0.4;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+#slider{
+  margin:0 auto;
+  width:100%;
+  overflow:hidden;
+}
+
+.slides{
+  overflow:hidden;
+  animation-name:fade;
+  animation-duration:1s;
+  display:none;
+}
+
+.slides img{
+  width:100%;
+  height: 100vh;
+}
+
+#dot{
+  margin:0 auto;
+  text-align:center;
+}
+.dot{
+  display:inline-block;
+  border-radius:50%;
+  background:#d3d3d3;
+  padding:8px;
+  margin:10px 5px;
+}
+
+.active{
+  background:black;
+}
+
+@media (max-width:567px){
+  #slider{
+    width:100%;
+
+  }
+}
+.one,
+.two,
+.three {
+  height: 100vh;
+  width: 100%;
+}
+
+
+.two {
+  background-color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.two .container {
+  width: 50%;
+  margin: 0 auto;
+  display: grid;
+  align-items: left;
+  grid-template-rows: repeat(3, 80px);
+}
+.two h3 {
+  font-size: 16px;
+}
+.two .progress__bar {
+  border: 1px solid rgb(126, 114, 114);
+  height: 25px;
+  position: relative;
+  overflow: hidden;
+}
+.two .progress__bar span {
+  position: absolute;
+  background-color: crimson;
+  height: 100%;
+  display: block;
+  transition: width 0.4s ease-in-out;
+}
+.my-skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.my-skills .about h2{
+  color: #555;
+  text-align: left;
+}
+
+.my-skills .about button{
+  padding: 10px 30px;
+  margin: 25px 0 20px 40px;
+  background-color:#E93656;
+  border-color: #E93656;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: oblique;
+}
+.moreInformation{
+  background-color: #131A36;
+  display: flex;
+  max-height: 210px;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.moreInformation img{
+  height: 50px;
+  max-width: 30px;
+  margin: 15px;
+}
+
+.moreInformation a :hover{
+  background: red;
+  border-radius: 10px;
+}

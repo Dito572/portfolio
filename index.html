@@ -1,79 +1,88 @@
 <!DOCTYPE html>
-<html bar="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <div class="one"> <div class="slides">  
-        <img src="images/ME.jpg" width="100%" />
-      </div>
-        
-      <div class="slides">  
-        <img src="images/ME2.jpg" width="100%" />
-      </div>
-        
-      <div class="slides">  
-        <img src="images/ME3.jpg" width="100%" />
-      </div> 
-      <div id="dot"><span class="dot"></span><span class="dot"></span><span class="dot"></span>
-      </div>
-    </div>
-
-    <!-- this is skills bars -->
-    <div class="two">
-      <div class="about-section">
-        <div class="content-section">
-          <div class="title">
-            <h1>Dito Mezurnishvili</h1>
-          </div>
-          <div class="content">
-            <h3>Software Engenieer</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br>sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam,
-            quis nostrud exercitation<br> ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.</p>
-            <div class="button">
-              <a href="">Hire Me</a>
+    <section class="enterance">
+        <div class="main-header">
+            <div class="left-header">
+                <h1 class="primary-header">Roca.</h1>
+                <h5 class="secondary-header">Resume Template</h5>  
             </div>
+            <div class="right-header">
+                
+                <h1 class="oone">01</h1>
+            </div> 
+            <h2 class="abtme">About me</h2>     
+        </div>
+        <div class="intro">
+            <div class="images">
+                <img class="slideshow-image" src="/static/images/dito.jpg" alt="" > 
+                <img class="slideshow-image" src="/static/images/dito1.jpg" alt="">
+                <img class="slideshow-image" src="/static/images/dito2.jpg" alt="">
+            </div>
+            <div class="right-side">
+                <div class="lit-ab">
+                    <h3 class="hi">Hi, I' Am</h3>
+                    <h1 class="name">Dito Mezurnishvili</h1>
+                    <p class="proff">I am Web Designer @ Company.com</p>
+                </div>
+                <div class="soc-icons">
+                  <a href="#"><img src="/static/images/facebook.png" alt="" class="ico"></a>
+                  <a href="#"><img src="/static/images/twitter.png" alt="" class="ico"></a>
+                  <a href="#"><img src="/static/images/google+.png" alt="" class="ico"></a>
+                  <a href="#"><img src="/static/images/youtube.png" alt="" class="ico"></a>
+                  <a href="#"><img src="/static/images/rss.png" alt="" class="ico"></a>
+                </div>
+            </div>
+        </div>
+        <h3 class="clients"><span class="red">100%</span>Satisfied Clients</h3>
+    </section>
+    <section class="about-me-section">
+      <div class="about-me-text">
+        <h2>Dito Mezurnishvili</h2>
+        <h4 style="color: #DAAE19;">Web Designer</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipi elit. Sunt sed ad possimus magm maiores.Ipa Lorem ipsum dolor sit amet, consectetur adiic Sunt sed ad posimus magnam maores. Ipsam as velt blanditiis debitis consequuntur mollita umenda nam obcaecati illo!        </p>
+        <div class="button">
+          <a href="">Hire Me</a>
+        </div>
+      </div>
+      <div class="about-me-img-container">
+        <img src="/static/images/dito1.jpg" alt="">
+      </div>
+      <div class="skills-container">
+        <div class="progress">
+          <h3>HTML (80%)</h3>
+          <div class="progress__bar">
+            <span data-width="80%"></span>
           </div>
         </div>
-        <div class="image-section">
-          <img src="image/img one.jpg">
+        <div class="progress">
+          <h3>CSS(50%)</h3>
+          <div class="progress__bar">
+            <span data-width="50%"></span>
+          </div>
         </div>
-        <div class="skills-container">
-          <div class="progress">
-            <h3>HTML (80%)</h3>
-            <div class="progress__bar">
-              <span data-width="80%"></span>
-            </div>
+        <div class="progress">
+          <h3>JAVASCRIPT (80%)</h3>
+          <div class="progress__bar">
+            <span data-width="80%"></span>
           </div>
-          <div class="progress">
-            <h3>CSS(50%)</h3>
-            <div class="progress__bar">
-              <span data-width="50%"></span>
-            </div>
+        </div>
+        <div class="progress">
+            <h3>MySQL (90%)</h3>
+          <div class="progress__bar">
+              <span data-width="90%"></span>
           </div>
-          <div class="progress">
-            <h3>JAVASCRIPT (80%)</h3>
-            <div class="progress__bar">
-              <span data-width="80%"></span>
-            </div>
-          </div>
-          <div class="progress">
-              <h3>MySQL (90%)</h3>
-            <div class="progress__bar">
-                <span data-width="90%"></span>
-            </div>
-          </div>
-      </div> 
-    </div>  
-    </div>
-    <div class="three">
-    </div>
+        </div>
+    </div> 
+    </section>
     <script src="main.js"></script>
 </body>
 </html>

@@ -1,48 +1,35 @@
-'use strict'
+// ეს არის სლაიდერი
+const slideShowImages = document.querySelectorAll(".images .slideshow-image");
 
-//this is first slider
-let index = 0;
-let slides = document.querySelectorAll(".slides");
-let dot = document.querySelectorAll(".dot");
+const imageDelayTime = 5000;
 
-function changeSlide(){
+let imageCounter = 0;
 
-  if(index<0){
-    index = slides.length-1;
-  }
-  
-  if(index>slides.length-1){
-    index = 0;
-  }
-  
-  for(let i=0;i<slides.length;i++){
-    slides[i].style.display = "none";
-    dot[i].classList.remove("active");
-  }
-  
-  slides[index].style.display= "block";
-  dot[index].classList.add("active");
-  
-  index++;
-  
-  setTimeout(changeSlide,5000);
+slideShowImages[imageCounter].style.display = 'block';
+
+setInterval(nextImage, imageDelayTime);
+
+
+function nextImage(){
+    slideShowImages[imageCounter].style.display = "none";
+    imageCounter = (imageCounter + 1) % slideShowImages.length;
+    slideShowImages[imageCounter].style.display = "block";
 }
 
-changeSlide();
+// სქილების პროცენტები
 
-//this is percentage bar
+const progress = document.querySelector(".about-me-section");
 
-const fillBar = document.querySelector(".two");
-const spans = document.querySelectorAll("span");
+const spans = document.querySelectorAll(".about-me-section span");
 
 window.addEventListener("scroll", () => {
-  if (document.documentElement.scrollTop >= fillBar.offsetTop) {
-    spans.forEach((span) => {
-      span.style.width = span.getAttribute("data-width");
-    });
-  } else {
-    spans.forEach((span) => {
-      span.style.width = 0;
-    });
-  }
+    if (document.documentElement.scrollTop >= progress.offsetTop){
+        spans.forEach((span) => {
+            span.style.width = span.getAttribute("data-width");
+        });
+    }else { 
+        spans.forEach((span) =>{
+            span.style.width = 0;
+        });
+    }
 });

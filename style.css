@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
 }
 .enterance{
     width: 100%;
@@ -164,6 +166,14 @@
   position: relative;
   overflow: hidden;
 }
+.skills-container h3{
+  color: #555555;
+  text-align: center;
+  letter-spacing: 0px;
+  font-size: 15px;
+  height: 27px;
+}
+
 .about-me-section .progress__bar span {
   position: absolute;
   top: 0;
@@ -218,7 +228,8 @@
 }
 .services{
   font-size:0;
-  height: 100%;
+  width: 100%;
+  height: 100vh;
   align-items: center;
   justify-content:stretch;
   display:grid;
@@ -236,11 +247,11 @@
 .services  img {
   margin: 20px;
   height:100%; 
-  width:400px;
+  width:300px;
   object-fit:cover;
 }
 a:before, a:after{
-  width:400px;
+  width:300px;
   margin: 20px;
   position:absolute;
   opacity:0;
@@ -267,4 +278,51 @@ a:before, a:after{
   opacity:1;
 }
 
-/*  */
+
+.recomandations-slider{
+  width: 100%;
+  height: 350px;
+  position: relative;
+  margin: auto;
+  background-image: url(static/images/countdown-bg.png);
+  background-color: #222222;
+  display: block;
+
+}
+.rec-slide{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rec-text{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #FFFFFF;
+  text-align: right;
+  letter-spacing: 0.45px;
+  width: 497px;
+  color: #FFFFFF;
+  margin: 20px;
+  margin-top: 100px;
+}
+.recomendation-img{
+  height: 140px;
+  border-radius: 100px;
+  background: #7ACCC800 0% 0% no-repeat padding-box;
+  border: 2px dashed #FFFFFF;
+  opacity: 1;
+  margin: 10px;
+  margin-top: 100px;
+}
+.recomendator h5{
+  color: #E93656;
+  text-align: left;
+  letter-spacing: 0.52px;
+  margin-top: 100px;
+}
+.recomendator h3{
+  text-align: left;
+  letter-spacing: 0.84px;
+  color: #FFFFFF;
+  opacity: 1;
+}

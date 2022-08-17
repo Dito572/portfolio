@@ -45,27 +45,62 @@ const secondSlide = document.querySelector('.secondSlide')
 const thirdSlide = document.querySelector('.thirdSlide')
 
 const showFirst = function() {
-    firstSlide.classList.remove('hidden')
-    secondSlide.classList.add('hidden')
-    thirdSlide.classList.add('hidden')
+  secondSlide.classList.add('hidden')
+  thirdSlide.classList.add('hidden')
+  firstSlide.classList.remove('hidden')
 }
 
 const showSecond = function(){
-    secondSlide.classList.remove('hidden')
     firstSlide.classList.add('hidden')
     thirdSlide.classList.add('hidden')
+    secondSlide.classList.remove('hidden')
 }
 const showthird = function(){
-    thirdSlide.classList.remove('hidden')
-    firstSlide.classList.add('hidden')
-    secondSlide.classList.add('hidden')
+  firstSlide.classList.add('hidden')
+  secondSlide.classList.add('hidden')
+  thirdSlide.classList.remove('hidden')
 }
 
-
-slideButton.addEventListener('click', showFirst);
 slideButton2.addEventListener('click', showSecond);
 slideButton3.addEventListener('click', showthird);
+slideButton.addEventListener('click', showFirst);
 
+
+//პროექტების გაფილტვრა
+
+filterSelection("all")
+function filterSelection(c) {
+  let x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    removeClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+  }
+}
+
+function addClass(element, name) {
+  let i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+function removeClass(element, name) {
+  let i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
 
 
 

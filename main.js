@@ -103,34 +103,6 @@ function removeClass(element, name) {
 }
 
 
-
-
-//API
-const url = "http://borjomi.loremipsum.ge/api/send-message";
-const formEl = document.querySelector("form");
-formEl.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const formData = new FormData(formEl);
-  const formDataSerialized = Object.fromEntries(formData);
-  const jsonObject = {
-    ...formDataSerialized,
-    sendToSelf: formDataSerialized.sendToSelf ? true : false,
-  };
-  try {
-    const response = await fetch(url, {
-      method: "POST",
-      body: JSON.stringify(jsonObject),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-  } catch (e) {
-    console.error(e);
-  }
-});
-
-
 //მოდალი
 const modal = document.querySelector('.modal');
 const btnCloseModal = document.querySelector('.close-modal');
